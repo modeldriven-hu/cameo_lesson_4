@@ -1,10 +1,10 @@
-# Cameo/MagicDraw plugin development - Lesson 3
+# Cameo/MagicDraw plugin development - Lesson 4
 
-This is the third lesson of the series. In this lesson we will learn how to work with model elements.p
+This is the fourth lesson of the series. In this lesson we will learn how to work with diagrams.
 
 Reference documentation:
 
-* https://docs.nomagic.com/display/MD2021xR2/Invoking+actions
+* https://docs.nomagic.com/display/MD2021xR2/Working+with+diagrams
 
 # Requirements
 
@@ -16,7 +16,7 @@ Reference documentation:
 
 ## Check out the repository
 
-`git clone https://github.com/modeldriven-hu/cameo_lesson_2.git`
+`git clone https://github.com/modeldriven-hu/cameo_lesson_4.git`
 
 ## Configure environment variable
 
@@ -34,7 +34,7 @@ or when using PowerShell:
 
 ## Extract into Cameo plugins folder
 
-Extract `target/hu.modeldriven.cameo.lesson2.zip` into `CAMEO_ROOT/plugins`
+Extract `target/hu.modeldriven.cameo.lesson4.zip` into `CAMEO_ROOT/plugins`
 
 ## Restart
 
