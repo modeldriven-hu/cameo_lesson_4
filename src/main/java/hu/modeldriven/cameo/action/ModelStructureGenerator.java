@@ -90,6 +90,7 @@ public class ModelStructureGenerator {
 
     private void createRelation(Package parentPackage, Class firstClass, Class secondClass) throws ReadOnlyElementException {
         var dependency = factory.createDependencyInstance();
+        dependency.setName("myDependency");
         CoreHelper.setSupplierElement(dependency, firstClass);
         CoreHelper.setClientElement(dependency, secondClass);
         manager.addElement(dependency, parentPackage);

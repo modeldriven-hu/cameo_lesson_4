@@ -11,6 +11,7 @@ import com.nomagic.magicdraw.uml.Finder;
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Package;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 public class ModelDiagramGenerator {
 
@@ -50,11 +51,22 @@ public class ModelDiagramGenerator {
                 com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class.class,
                 "First class");
 
-        if (firstClass != null) {
-            var firstClassShape = presentationManager.createShapeElement(firstClass, diagramPresentation);
-            presentationManager.reshapeShapeElement(firstClassShape, new Rectangle(200, 200, 200, 300));
-        }
-    }
+        var firstClassShape = presentationManager.createShapeElement(firstClass, diagramPresentation);
+        presentationManager.reshapeShapeElement(firstClassShape, new Rectangle(50, 50, 200, 300));
+
+        var secondClass = Finder.byName().find(parentPackage,
+                com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class.class,
+                "Second class");
+
+        var secondClassShape = presentationManager.createShapeElement(secondClass, diagramPresentation);
+        presentationManager.reshapeShapeElement(secondClassShape, new Rectangle(350, 50, 200, 300));
+
+        var dependency = Finder.byName().find(parentPackage,
+                com.nomagic.uml2.ext.magicdraw.classes.mddependencies.Dependency.class,
+                "myDependency");
+
+        var dependencyPath = presentationManager.createPathElement(dependency, secondClassShape, firstClassShape);
+     }
 
 
 }
