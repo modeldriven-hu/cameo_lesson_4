@@ -33,7 +33,6 @@ public class ModelDiagramGenerator {
             createDiagram(parentPackage);
             SessionManager.getInstance().closeSession(project);
         } catch (Exception e) {
-            e.printStackTrace();
             SessionManager.getInstance().cancelSession(project);
         }
     }
