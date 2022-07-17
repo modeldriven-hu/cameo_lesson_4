@@ -39,3 +39,8 @@ Extract `target/hu.modeldriven.cameo.lesson4.zip` into `CAMEO_ROOT/plugins`
 ## Restart
 
 Restart CAMEO
+
+# Configure javadoc for IntelliJ
+
+![image](https://user-images.githubusercontent.com/8182138/179385202-9dc9e4cf-e79a-4cd2-bc2f-19ac3f2ba04c.png)
+
