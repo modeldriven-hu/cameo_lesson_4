@@ -8,9 +8,10 @@ import com.nomagic.magicdraw.openapi.uml.SessionManager;
 import com.nomagic.magicdraw.uml.Finder;
 import com.nomagic.uml2.ext.jmi.helpers.CoreHelper;
 import com.nomagic.uml2.ext.jmi.helpers.StereotypesHelper;
-import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.*;
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class;
+import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Enumeration;
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Package;
+import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Type;
 import com.nomagic.uml2.impl.ElementsFactory;
 
 public class ModelStructureGenerator {
@@ -102,7 +103,7 @@ public class ModelStructureGenerator {
 
         var values = new String[]{"a", "b", "c"};
 
-        for (var value : values){
+        for (var value : values) {
             var literal = factory.createEnumerationLiteralInstance();
 
             var valueSpecification = factory.createLiteralStringInstance();

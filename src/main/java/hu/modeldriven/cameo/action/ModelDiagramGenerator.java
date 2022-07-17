@@ -11,7 +11,6 @@ import com.nomagic.magicdraw.uml.Finder;
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Package;
 
 import java.awt.*;
-import java.util.ArrayList;
 
 public class ModelDiagramGenerator {
 
@@ -66,7 +65,7 @@ public class ModelDiagramGenerator {
                 "myDependency");
 
         var dependencyPath = presentationManager.createPathElement(dependency, secondClassShape, firstClassShape);
-     }
+    }
 
 
 }
