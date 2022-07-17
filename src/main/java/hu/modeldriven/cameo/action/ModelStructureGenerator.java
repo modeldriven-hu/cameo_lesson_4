@@ -27,10 +27,11 @@ public class ModelStructureGenerator {
 
     public void execute(Package parentPackage) {
         try {
-            SessionManager.getInstance().createSession(project, "Creating model elements from lesson 3");
+            SessionManager.getInstance().createSession(project, "Creating model elements for lesson 4");
             createModelElements(parentPackage);
             SessionManager.getInstance().closeSession(project);
         } catch (Exception e) {
+            e.printStackTrace();
             Application.getInstance().getGUILog().showMessage("Exception occured: " + e.getMessage());
             SessionManager.getInstance().cancelSession(project);
         }

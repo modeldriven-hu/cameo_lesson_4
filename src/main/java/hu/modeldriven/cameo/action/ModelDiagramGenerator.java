@@ -27,12 +27,13 @@ public class ModelDiagramGenerator {
     }
 
     public void execute(Package parentPackage) {
-        SessionManager.getInstance().createSession(project, "Creating diagram and presentation elements");
+        SessionManager.getInstance().createSession(project, "Creating diagram and presentation elements for lesson 4");
 
         try {
             createDiagram(parentPackage);
             SessionManager.getInstance().closeSession(project);
         } catch (Exception e) {
+            e.printStackTrace();
             SessionManager.getInstance().cancelSession(project);
         }
     }
@@ -40,15 +41,19 @@ public class ModelDiagramGenerator {
     private void createDiagram(Package parentPackage) throws ReadOnlyElementException {
 
         var diagram = manager.createDiagram(DiagramTypeConstants.UML_CLASS_DIAGRAM, parentPackage);
+        diagram.setName("My diagram");
+
         var diagramPresentation = project.getDiagram(diagram);
         diagramPresentation.open();
 
         var firstClass = Finder.byName().find(parentPackage,
                 com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class.class,
-                "First Class");
+                "First class");
 
-        var firstClassShape = presentationManager.createShapeElement(firstClass, diagramPresentation);
-        presentationManager.reshapeShapeElement(firstClassShape, new Rectangle(200, 200, 300, 400));
+        if (firstClass != null) {
+            var firstClassShape = presentationManager.createShapeElement(firstClass, diagramPresentation);
+            presentationManager.reshapeShapeElement(firstClassShape, new Rectangle(200, 200, 200, 300));
+        }
     }
 
 
